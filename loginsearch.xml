@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="loginandsearch">
+    <test name="login">
+        <groups>
+            <run>
+                <include name="global"/>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="login.LoginTests"/>
+        </classes>
+    </test>
+    <test name="search">
+        <groups>
+            <run>
+
+                <include name="smoke"/>
+                <exclude name="regression"/>
+            </run>
+
+        </groups>
+        <classes>
+            <class name="search.SearchTest"/>
+        </classes>
+    </test>
+</suite>
